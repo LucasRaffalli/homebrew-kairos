@@ -1,6 +1,6 @@
 cask "kairos" do
   version "0.2.0"
-  sha256 "f531fcd1246fa38eb83dbac32ce9d7e38b02d0f424fabfa8c4ceadd7b1c601e7"
+  sha256 "677b88ae9f744a0ce1b0011ab0759b5dc8f6c8334d4af25db60367f1966a5804"
 
   url "https://release.lucasraffalli.com/kairos/Kairos_#{version}_aarch64.dmg"
   name "Kairos"
