@@ -1,6 +1,6 @@
 cask "kairos" do
-  version "0.1.0"
-  sha256 "aad7ddb26f2d1c73caf2b287f514804a45abb2c43f15c4ea426ef223e5c2f7c7"
+  version "0.2.0"
+  sha256 "f531fcd1246fa38eb83dbac32ce9d7e38b02d0f424fabfa8c4ceadd7b1c601e7"
 
   url "https://release.lucasraffalli.com/kairos/Kairos_#{version}_aarch64.dmg"
   name "Kairos"
@@ -12,6 +12,9 @@ cask "kairos" do
   depends_on arch: :arm64
 
   app "Kairos.app"
+  # La commande kairos (CLI et serveur MCP, lancé par « kairos mcp ») vit dans l'app : le lien suit
+  # donc ses mises à jour.
+  binary "#{appdir}/Kairos.app/Contents/MacOS/kairos"
 
   # App non notarisée : sans ça, Gatekeeper affiche « Kairos est endommagé ».
   postflight do
